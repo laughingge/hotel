@@ -6,6 +6,7 @@
     <modules>
         <module>eureka-server-center</module>
         <module>common-mapper</module>
+        <module>common-pojo</module>
     </modules>
 
     <groupId>com.zmh</groupId>
