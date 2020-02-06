@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+
+      >
+
+<head th:replace="~{fragments/header :: header}">
+</head>
+
+<body class="hold-transition skin-purple sidebar-mini">
+
+<div class="wrapper">
+
+    <!-- 页面头部 -->
+    <header class="main-header">
+
+
+        <!-- Logo -->
+        <a href="all-admin-index.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>数据</b></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>数据</b>后台管理</span>
+        </a>
+
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">你有4个邮件</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="../../static/img/user2-160x160.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <h4>
+                                                系统消息
+                                                <small><i class="fa fa-clock-o"></i> 5 分钟前</small>
+                                            </h4>
+                                            <p>欢迎登录系统?</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="../../static/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <h4>
+                                                团队消息
+                                                <small><i class="fa fa-clock-o"></i> 2 小时前</small>
+                                            </h4>
+                                            <p>你有新的任务了</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="../../static/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Developers
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="../../static/img/user3-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Sales Department
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="../../static/img/user4-128x128.jpg" class="img-circle"
+                                                     alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Reviewers
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">你有10个新消息</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-warning text-yellow"></i> Very long description here that
+                                            may not
+                                            fit into the page and may cause design problems
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-red"></i> 5 new members joined
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-red"></i> You changed your username
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">你有9个新任务</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Create a nice theme
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-green" style="width: 40%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Some task I need to do
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-red" style="width: 60%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li>
+                                        <!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Make beautiful transitions
+                                                <small class="pull-right">80%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%"
+                                                     role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                     aria-valuemax="100">
+                                                    <span class="sr-only">80% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="../../static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs"sec:authentication="name">张猿猿</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="../../static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p sec:authentication="name">张猿猿</p>
+                                <small>最后登录 11:20AM</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body
+                    <li class="user-body">
+                        <div class="row">
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Followers</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Sales</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#">Friends</a>
+                            </div>
+                        </div>
+                    </li>-->
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">修改密码</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="/logout" class="btn btn-default btn-flat">注销</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 页面头部 /-->
+
+    <!-- 导航侧栏 -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="../../static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p sec:authentication="name">张猿猿</p>
+
+                    <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+                </div>
+            </div>
+            <!-- search form -->
+            <!--<form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="搜索...">
+            <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+    </form>-->
+            <!-- /.search form -->
+
+
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="header">菜单</li>
+
+                <li id="admin-index"><a href="../../"><i class="fa fa-dashboard"></i> <span>首页</span></a>
+                </li>
+
+                <!-- 菜单 -->
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>客户管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login">
+                            <a href="../../user/list">
+                                <i class="fa fa-circle-o"></i> 客户数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../user/add">
+                                <i class="fa fa-circle-o"></i> 客户增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 客户更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview "sec:authorize="hasRole('ADMIN')">
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>雇员管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login">
+                            <a href="../../Emp/list">
+                                <i class="fa fa-circle-o"></i> 雇员数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../Emp/add">
+                                <i class="fa fa-circle-o"></i> 雇员增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 雇员更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>楼层管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login" >
+                            <a href="../../Floor/list">
+                                <i class="fa fa-circle-o"></i> 楼层数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../Floor/add">
+                                <i class="fa fa-circle-o"></i> 楼层增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 楼层更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview ">
+
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>房型管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu" >
+
+                        <li id="admin-login" >
+                            <a href="../../Roomtype/list">
+                                <i class="fa fa-circle-o"></i> 房型数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../Roomtype/add">
+                                <i class="fa fa-circle-o"></i> 房型增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 房型更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>房间管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login" class="active">
+                            <a href="../../Room/list">
+                                <i class="fa fa-circle-o"></i> 房间数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../Room/add">
+                                <i class="fa fa-circle-o"></i> 房间增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 房间更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview">
+
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>入住管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login">
+                            <a href="../../Order/list">
+                                <i class="fa fa-circle-o"></i> 入住数据
+                            </a>
+                        </li>
+
+                        <li id="admin-register">
+                            <a href="../../Order/add">
+                                <i class="fa fa-circle-o"></i> 入住增加
+                            </a>
+                        </li>
+
+                        <li id="admin-404">
+                            <a href="#">
+                                <i class="fa fa-circle-o"></i> 入住更新
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                <li class="treeview"sec:authorize="hasRole('ADMIN')">
+
+                    <a href="#">
+                        <i class="fa fa-folder"></i> <span>营销管理</span>
+                        <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li id="admin-login">
+                            <a href="../../chart">
+                                <i class="fa fa-circle-o"></i> 营销额图
+                            </a>
+
+
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- 导航侧栏 /-->
+
+    <!-- 内容区域 -->
+    <!-- @@master = admin-layout.html-->
+    <!-- @@block = content -->
+
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                房间管理
+                <small>房间数据</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="#">房间管理</a></li>
+                <li class="active">房间数据</li>
+            </ol>
+        </section>
+        <!-- 正文区域 -->
+        <section class="content">
+
+            <!-- .box-body -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">列表</h3>
+                </div>
+
+                <div class="box-body">
+
+                    <!-- 数据表格 -->
+                    <div class="table-box">
+
+                        <!--工具栏-->
+                        <div class="pull-left">
+                            <div class="form-group form-inline">
+                                <div class="btn-group">
+                                    <a class="btn btn-default" th:href="@{'add'}" title="新增">新增<i
+                                            class="fa fa-edit text-navy"></i></a>
+
+                                    <button type="button" class="btn btn-default" title="删除"><i
+                                            class="fa fa-trash-o"></i> 删除
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i>
+                                        开启
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i>
+                                        屏蔽
+                                    </button>
+                                    <button type="button" class="btn btn-default" title="刷新"><i
+                                            class="fa fa-refresh"></i> 刷新
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-tools pull-right">
+                            <div class="has-feedback">
+                                <input type="text" class="form-control input-sm" placeholder="搜索">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <!--工具栏/-->
+
+                        <!--数据列表-->
+                        <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
+                            <thead>
+                            <tr>
+                                <th class="" style="padding-right:0px;">
+                                    <input id="selall" type="checkbox" class="icheckbox_square-blue">
+                                </th>
+                                <th> 房间id</th>
+                                <th> 图片</th>
+                                <th> 房间号</th>
+                                <th> 类型</th>
+                                <th> 楼层</th>
+                                <th> 状态</th>
+                                <th> 备注</th>
+                                <th>订购</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr th:each="Room:${room}">
+
+                                <td><input name="ids" type="checkbox" class="text-center"></td>
+                                <td th:text="${Room.roomid}"> </td>
+                                <td>
+                                    <img th:src="@{../../uploads/{filename}(filename=${Room.pic})}" th:width="100" th:height="100"/>
+                                </td>
+
+                                <td th:text="${Room.number}"></td>
+                                <td th:text="${Room.roomtypename}"></td>
+                                <td th:text="${Room.floorname}"></td>
+                                <td th:text="${Room.state}"></td>
+                                <td th:text="${Room.message}"></td>
+
+
+
+
+
+                                <td th:switch = "${ Room.state  }" >
+                                        <div th:case="空闲"  >
+                                    <a class="btn bg-info btn-xs" th:href="@{'../../Order/add/'+${Room.number}}" title="预定">预定<i
+                                            class="fa fa-edit text-navy"></i></a>
+                                          </div>
+                                        <div th:case="*" th:text = "${ Room.state  }" ></div>
+                                    <div th:case="被预定" th:text = "被预定" ></div>
+                                </td>
+
+                                <td>
+
+                                    <a class="btn bg-danger btn-xs" th:href="@{'del/'+${Room.roomid}+'/'+${Room.roomtypename}}" title="删除">删除<i
+                                            class="fa fa-edit text-navy"></i></a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="btn bg-orange btn-xs" th:href="@{'update/'+${Room.roomid}}" title="修改">修改<i
+                                            class="fa fa-edit text-navy"></i></a>
+                                </td>
+
+                            </tr>
+
+
+                            </tbody>
+                            <!--
+                        <tfoot>
+                        <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                        </tr>
+                        </tfoot>-->
+                        </table>
+                        <!--数据列表/-->
+
+
+                        <!--工具栏/-->
+
+                    </div>
+                    <!-- 数据表格 /-->
+
+
+                </div>
+                <!-- /.box-body -->
+
+                <!-- .box-footer-->
+                <div class="box-footer">
+                    <div class="pull-left">
+                        <div class="form-group form-inline">
+
+                            <p th:text="'总共：'+${page.getTotalPage()}+'页,'+'共'+${page.getTotalNum()}+'条数据'"></p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="box-tools pull-right">
+                        <ul class="pagination">
+
+
+                            <li th:class="${page.getPageNum() eq 1} ? 'disabled' : ''"><a th:if="${page.getPageNum() ne 1}"th:href="@{/Room/list(pageNum=${pageNum-1})}">上一页</a></li>
+                            <li th:each="pageNo : ${#numbers.sequence(0, page.getTotalPage() - 1)}" th:class="${page.getTotalPage() eq pageNo}? 'active' : ''">
+                                <a th:if="${page.getTotalPage()  eq pageNo}" href="javascript:void(0);">
+                                    <span th:text="${pageNo + 1}"></span>
+                                </a>
+                                <a th:if="${not (page.getTotalPage()  eq pageNo)}" th:href="@{${'/Room/list'}(pageNum=${pageNo+1})}">
+                                    <span th:text="${pageNo + 1}"></span>
+                                </a>
+
+                            </li>
+                            <li th:class="${page.getPageNum() eq page.getTotalPage()} ? 'disabled' : ''"><a  th:if="${page.getPageNum() ne page.getTotalPage()}"th:href="@{/Room/list(pageNum=${pageNum+1})}">下一页</a></li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /.box-footer-->
+
+
+            </div>
+
+        </section>
+    </div>
+    <!-- @@close -->
+    <!-- 内容区域 /-->
+
+    <!-- 底部导航 -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 1.0.8
+        </div>
+        <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
+    </footer>
+    <!-- 底部导航 /-->
+
+</div>
+
+
+<div th:replace="~{fragments/footer :: footer}">...</div>
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+
+<script>
+    $(document).ready(function () {
+        // 选择框
+        $(".select2").select2();
+
+        // WYSIHTML5编辑器
+        $(".textarea").wysihtml5({
+            locale: 'zh-CN'
+        });
+    });
+
+
+    // 设置激活菜单
+    function setSidebarActive(tagUri) {
+        var liObj = $("#" + tagUri);
+        if (liObj.length > 0) {
+            liObj.parent().parent().addClass("active");
+            liObj.addClass("active");
+        }
+    }
+
+
+    $(document).ready(function () {
+
+        // 激活导航位置
+        setSidebarActive("admin-datalist");
+
+        // 列表按钮
+        $("#dataList td input[type='checkbox']").iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            increaseArea: '20%'
+        });
+        // 全选操作
+        $("#selall").click(function () {
+            var clicks = $(this).is(':checked');
+            if (!clicks) {
+                $("#dataList td input[type='checkbox']").iCheck("uncheck");
+            } else {
+                $("#dataList td input[type='checkbox']").iCheck("check");
+            }
+            $(this).data("clicks", !clicks);
+        });
+    });
+</script>
+</body>
+
+</html>

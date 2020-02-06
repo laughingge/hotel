@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="form-horizontal" method="post" action="/user/update">
+
+    <input type="hidden" th:value="${User.userid}"  name="userid"><br>
+    <input type="text" th:value="${User.uname}"  name="uname"><br>
+    <input type="password" th:value="${User.password}"  name="password"><br>
+    <input type="text" th:value="${User.realname}"  name="realname"><br>
+    <input type="text" th:value="${User.phone}"  name="phone"><br>
+    <input type="text" th:value="${User.idcard}"  name="idcard"><br>
+    <input type="text" th:value="${User.address}"  name="address"><br>
+    <input type="text" th:value="${User.state}"  name="state"><br>
+    <input type="text" th:value="${User.message}"  name="message"><br>
+    <button type="submit" >修改信息</button>
+
+</form>
+</body>
+</html>

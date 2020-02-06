@@ -1,0 +1,57 @@
+2020-01-27 18:50:30.267 [http-nio-8080-exec-5] DEBUG loadUserByUsername() - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:50:32.443 [http-nio-8080-exec-5] DEBUG loadUserByUsername() - ==> Parameters: admin(String)
+2020-01-27 18:50:33.270 [http-nio-8080-exec-5] DEBUG loadUserByUsername() - <==      Total: 1
+2020-01-27 18:50:33.431 [http-nio-8080-exec-6] DEBUG getAll() - ==>  Preparing: select * from User 
+2020-01-27 18:50:33.432 [http-nio-8080-exec-6] DEBUG getAll() - ==> Parameters: 
+2020-01-27 18:50:33.665 [http-nio-8080-exec-6] DEBUG getAll() - <==      Total: 2
+2020-01-27 18:50:34.212 [http-nio-8080-exec-7] DEBUG loadUserByUsername() - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:50:34.212 [http-nio-8080-exec-7] DEBUG loadUserByUsername() - ==> Parameters: admin(String)
+2020-01-27 18:50:34.215 [http-nio-8080-exec-7] DEBUG loadUserByUsername() - <==      Total: 1
+2020-01-27 18:50:34.431 [http-nio-8080-exec-8] DEBUG getCount() - ==>  Preparing: SELECT count(orderid) as count FROM hotel.orders; 
+2020-01-27 18:50:34.433 [http-nio-8080-exec-8] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:35.341 [http-nio-8080-exec-8] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:35.342 [http-nio-8080-exec-8] DEBUG getCount() - ==>  Preparing: SELECT count(userid) FROM User 
+2020-01-27 18:50:35.343 [http-nio-8080-exec-8] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:35.393 [http-nio-8080-exec-8] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:35.394 [http-nio-8080-exec-8] DEBUG getBaifenbi() - ==>  Preparing: SELECT cast((select count(roomid) from room where state='空闲')/count(roomid) as decimal(18,2)) as baifenbi FROM hotel.room ; 
+2020-01-27 18:50:35.581 [http-nio-8080-exec-9] DEBUG loadUserByUsername() - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:50:35.582 [http-nio-8080-exec-9] DEBUG loadUserByUsername() - ==> Parameters: admin(String)
+2020-01-27 18:50:35.681 [http-nio-8080-exec-10] DEBUG loadUserByUsername() - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:50:35.682 [http-nio-8080-exec-10] DEBUG loadUserByUsername() - ==> Parameters: admin(String)
+2020-01-27 18:50:35.926 [http-nio-8080-exec-10] DEBUG loadUserByUsername() - <==      Total: 1
+2020-01-27 18:50:35.986 [http-nio-8080-exec-8] DEBUG getBaifenbi() - ==> Parameters: 
+2020-01-27 18:50:36.044 [http-nio-8080-exec-9] DEBUG loadUserByUsername() - <==      Total: 1
+2020-01-27 18:50:36.059 [http-nio-8080-exec-1] DEBUG getCount() - ==>  Preparing: SELECT count(orderid) as count FROM hotel.orders; 
+2020-01-27 18:50:36.059 [http-nio-8080-exec-1] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:36.391 [http-nio-8080-exec-1] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:36.392 [http-nio-8080-exec-1] DEBUG getCount() - ==>  Preparing: SELECT count(userid) FROM User 
+2020-01-27 18:50:36.392 [http-nio-8080-exec-1] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:36.570 [http-nio-8080-exec-8] DEBUG getBaifenbi() - <==      Total: 1
+2020-01-27 18:50:36.571 [http-nio-8080-exec-8] DEBUG getCount() - ==>  Preparing: SELECT count(roomtypeid) FROM hotel.roomtype; 
+2020-01-27 18:50:36.572 [http-nio-8080-exec-8] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:36.593 [http-nio-8080-exec-1] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:36.594 [http-nio-8080-exec-1] DEBUG getBaifenbi() - ==>  Preparing: SELECT cast((select count(roomid) from room where state='空闲')/count(roomid) as decimal(18,2)) as baifenbi FROM hotel.room ; 
+2020-01-27 18:50:36.596 [http-nio-8080-exec-1] DEBUG getBaifenbi() - ==> Parameters: 
+2020-01-27 18:50:36.683 [http-nio-8080-exec-8] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:36.684 [http-nio-8080-exec-8] DEBUG getAll() - ==>  Preparing: SELECT orders.*,roomtypename,number FROM hotel.orders,room,roomtype where orders.roomid=room.roomid and room.roomtypeid=roomtype.roomtypeid 
+2020-01-27 18:50:36.755 [http-nio-8080-exec-8] DEBUG getAll() - ==> Parameters: 
+2020-01-27 18:50:38.064 [http-nio-8080-exec-1] DEBUG getBaifenbi() - <==      Total: 1
+2020-01-27 18:50:38.065 [http-nio-8080-exec-1] DEBUG getCount() - ==>  Preparing: SELECT count(roomtypeid) FROM hotel.roomtype; 
+2020-01-27 18:50:38.065 [http-nio-8080-exec-1] DEBUG getCount() - ==> Parameters: 
+2020-01-27 18:50:38.128 [http-nio-8080-exec-1] DEBUG getCount() - <==      Total: 1
+2020-01-27 18:50:38.129 [http-nio-8080-exec-1] DEBUG getAll() - ==>  Preparing: SELECT orders.*,roomtypename,number FROM hotel.orders,room,roomtype where orders.roomid=room.roomid and room.roomtypeid=roomtype.roomtypeid 
+2020-01-27 18:50:38.129 [http-nio-8080-exec-1] DEBUG getAll() - ==> Parameters: 
+2020-01-27 18:50:38.794 [http-nio-8080-exec-1] DEBUG getAll() - <==      Total: 6
+2020-01-27 18:50:38.795 [http-nio-8080-exec-8] DEBUG getAll() - <==      Total: 6
+2020-01-27 18:50:38.795 [http-nio-8080-exec-1] DEBUG getAll() - ==>  Preparing: SELECT room.*,roomtype.roomtypename,floorname FROM hotel.room,roomtype,floor where room.roomtypeid=roomtype.roomtypeid and room.floorid=floor.floorid order by state ; 
+2020-01-27 18:50:38.796 [http-nio-8080-exec-8] DEBUG getAll() - ==>  Preparing: SELECT room.*,roomtype.roomtypename,floorname FROM hotel.room,roomtype,floor where room.roomtypeid=roomtype.roomtypeid and room.floorid=floor.floorid order by state ; 
+2020-01-27 18:50:38.799 [http-nio-8080-exec-1] DEBUG getAll() - ==> Parameters: 
+2020-01-27 18:50:38.799 [http-nio-8080-exec-8] DEBUG getAll() - ==> Parameters: 
+2020-01-27 18:50:39.367 [http-nio-8080-exec-8] DEBUG getAll() - <==      Total: 8
+2020-01-27 18:50:39.413 [http-nio-8080-exec-1] DEBUG getAll() - <==      Total: 8
+2020-01-27 18:50:39.725 [http-nio-8080-exec-1] DEBUG getUserByuserid() - ==>  Preparing: SELECT * FROM User where userid=? 
+2020-01-27 18:50:39.725 [http-nio-8080-exec-8] DEBUG getUserByuserid() - ==>  Preparing: SELECT * FROM User where userid=? 
+2020-01-27 18:50:39.738 [http-nio-8080-exec-8] DEBUG getUserByuserid() - ==> Parameters: 1(Integer)
+2020-01-27 18:50:39.739 [http-nio-8080-exec-1] DEBUG getUserByuserid() - ==> Parameters: 1(Integer)
+2020-01-27 18:50:39.740 [http-nio-8080-exec-1] DEBUG getUserByuserid() - <==      Total: 1
+2020-01-27 18:50:39.741 [http-nio-8080-exec-8] DEBUG getUserByuserid() - <==      Total: 1

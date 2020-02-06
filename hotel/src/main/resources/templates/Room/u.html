@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="form-horizontal" method="post" action="/Room/update"enctype="multipart/form-data">
+
+    <input type="hidden" th:value="${Room.roomid}"  name="roomid"><br>
+    图片：<input type="file"   name="new"><br>
+    <input type="hidden" th:value="${Room.pic}" name="old"/>
+    <img th:src="@{../../uploads/{filename}(filename=${Room.pic})}" th:width="50" th:height="50" /><br>
+    房间号：<input type="text" th:value="${Room.roomnumber}"  name="roomnumber"><br>
+    类型：<input type="text" th:value="${Room.type}"  name="type"><br>
+    楼层:<input type="text" th:value="${Room.floorid}"  name="floorid"><br>
+    状态：<input type="text" th:value="${Room.state}"  name="state"><br>
+    备注：<input type="text" th:value="${Room.message}"  name="message"><br>
+
+    <button type="submit" >修改信息</button>
+
+</form>
+</body>
+</html>

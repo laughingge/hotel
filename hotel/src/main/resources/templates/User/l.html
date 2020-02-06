@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table">
+    <tr>
+        <th> 用户ID</th>
+        <th> 用户姓名</th>
+        <th> 账号</th>
+        <th> 密码</th>
+        <th> 权限</th>
+        <th> 状态</th>
+    </tr>
+    <tr th:each="User:${usr}">
+
+
+        <td th:text="${User.userid}">  abc </td>
+        <td th:text="${User.uname}"></td>
+        <td th:text="${User.password}"></td>
+        <td th:text="${User.realname}"></td>
+        <td th:text="${User.phone}"></td>
+        <td th:text="${User.idcard}"></td>
+        <td>
+            <a th:href="@{'del/'+${User.userid}}" title="删除">删除<i class="fa fa-edit text-navy"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a th:href="@{'update/'+${User.userid}}" title="修改">修改<i class="fa fa-edit text-navy"></i></a>
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/layui.css" >
+</head>
+<body>
+<table class="table">
+    <tr>
+        <th> 房间id</th>
+        <th> 图片</th>
+        <th> 房间号</th>
+        <th> 类型</th>
+        <th> 楼层</th>
+        <th> 状态</th>
+        <th> 备注</th>
+
+    </tr>
+    <tr th:each="Room:${room}">
+
+
+        <td th:text="${Room.roomid}"> </td>
+        <td>
+            <img th:src="@{../../uploads/{filename}(filename=${Room.pic})}" th:width="50" th:height="50"/>
+        </td>
+
+        <td th:text="${Room.roomnumber}"></td>
+        <td th:text="${Room.type}"></td>
+        <td th:text="${Room.floorid}"></td>
+        <td th:text="${Room.state}"></td>
+        <td th:text="${Room.message}"></td>
+
+        <td>
+            <a th:href="@{'del/'+${Room.roomid}}" title="删除">删除<i class="fa fa-edit text-navy"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a th:href="@{'update/'+${Room.roomid}}" title="修改">修改<i class="fa fa-edit text-navy"></i></a>
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,12 @@
+2020-01-27 18:15:41.946 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:15:42.111 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==> Parameters: admin(String)
+2020-01-27 18:15:42.202 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - <==      Total: 1
+2020-01-27 18:15:42.350 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==>  Preparing: select * from Floor 
+2020-01-27 18:15:42.353 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==> Parameters: 
+2020-01-27 18:15:42.365 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - <==      Total: 3
+2020-01-27 18:17:24.023 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==>  Preparing: SELECT * FROM employee where username=? limit 1 
+2020-01-27 18:17:24.217 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==> Parameters: admin(String)
+2020-01-27 18:17:24.316 [http-nio-8080-exec-5] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - <==      Total: 1
+2020-01-27 18:17:24.497 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==>  Preparing: select * from Floor 
+2020-01-27 18:17:24.498 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - ==> Parameters: 
+2020-01-27 18:17:24.511 [http-nio-8080-exec-6] DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:143) - <==      Total: 3

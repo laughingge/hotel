@@ -1,0 +1,43 @@
+spring:
+  resources:
+    static-locations: classpath:/
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(1zKvJNqeNZukf4pOhRtAA8SWmgqjIg8q33bSx191TdjPEkcv7hH+uVrnTnfCqrn1y7k9rQkTKy2TcAowueABWfhQG9DsExPRxjcc1Y0FratiFJDA4DW29BKaZZ0d2f9BfxH+iUliUZ8nSS8oxlJjNtUIhcAXikHnm0MsmhGt+10=)
+    username: ENC(UX2jSVwrLhfdrR4WwPJHhA==)
+    password: ENC(D4T1kDEQ9PxoAASxa/zWlw==)
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    date-format: yyyy-MM-dd
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    servlet:
+      content-type: text/html; charset=utf-8
+  redis:
+
+    # Redis服务器地址
+    host: 192.168.68.10
+
+    # Redis服务器连接端口
+    port: 6379
+
+    # Redis服务器连接密码（默认为空）
+   # password:
+
+
+
+     # 连接超时时间（毫秒）
+    timeout: 5000
+    jedis:
+      pool:
+        max-wait: 30000
+        max-active: 100
+        max-idle: 20
+        min-idle: 0
+
+
+
+
+
