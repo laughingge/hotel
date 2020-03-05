@@ -237,14 +237,14 @@ public class OrdersController {
    public String ExportBankCkeckInfo(HttpServletResponse response) throws Exception {
        List<Orders> list = ordersService.getAll();
        for(Orders o:list){
-           log.info(String.valueOf(o.getOrderid()));
+           log.info("导出excel成功");
        }
 
        Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams(), Orders.class, list);
        FileOutputStream fos = new FileOutputStream("D:/upload/销售图.xls");
        workbook.write(fos);
        fos.close();
-       return "redirect:../list";
+       return "redirect:../Order/list";
    }
 
 }
