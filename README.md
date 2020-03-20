@@ -10,5 +10,9 @@
 ![avatar](https://ae01.alicdn.com/kf/H39043f3d2f5448abab1fd4dba384d784O.png)
 ## 房间显示
 [![https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png](https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png)](https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png)
-## 房间显示
-[![https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png](https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png)](https://ae01.alicdn.com/kf/H5ab10e6e6fc64dc087a24106c369e146b.png)
+## 房间更新
+[![https://ae01.alicdn.com/kf/Ha56d0d262ccd48a8adc247994c25c743i.png](https://ae01.alicdn.com/kf/Ha56d0d262ccd48a8adc247994c25c743i.png)](https://ae01.alicdn.com/kf/Ha56d0d262ccd48a8adc247994c25c743i.png)
+## 入住管理
+[![https://ae01.alicdn.com/kf/Hbcf09c8bf7b544388cf40409ba97be65g.png](https://ae01.alicdn.com/kf/Hbcf09c8bf7b544388cf40409ba97be65g.png)](https://ae01.alicdn.com/kf/Hbcf09c8bf7b544388cf40409ba97be65g.png)
+## 营销图显示
+[![https://ae01.alicdn.com/kf/H23f185a9fe594627ace4dd8434076a95O.png](https://ae01.alicdn.com/kf/H23f185a9fe594627ace4dd8434076a95O.png)](https://ae01.alicdn.com/kf/H23f185a9fe594627ace4dd8434076a95O.png)
